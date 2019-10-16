@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: epaper
+  freemarker:
+    request-context-attribute: request
+    suffix: .ftl
+    content-type: text/html
+    enabled: true
+    cache: false
+    template-loader-path: classpath:/static/
+    charset: UTF-8
+  mvc:
+    static-path-pattern: /static/**
+  servlet:
+    multipart.max-file-size: 100MB
+    multipart.max-request-size: 100MB
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://192.168.31.237:1433;DatabaseName=magna
+    username: sa
+    password: Eorion123456
+
+server:
+  port: 8153
+
+pdf:
+  dpi: 600
+  templatePath: /Users/eorionx/test/templatePath/
